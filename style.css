@@ -4,7 +4,8 @@ body{
 
 .container {
 	display: grid;
-	grid-template: 14rem 1fr /15rem 1fr;
+	grid-template: 12rem 1fr /15rem 1fr;
+	height: 100vh;
 }
 
 .sidebar {
@@ -13,6 +14,7 @@ body{
 	display: grid;
 	grid-auto-rows: min-content;
 	gap: 10rem;
+	background-color: aqua;
 }
 
 .sidebar .logo{
@@ -75,6 +77,69 @@ img {
 .user-info button{
 	font-size: 1.5rem;
 	border-radius: 30px;
-	padding: 1rem 1.5rem;
+	padding: 0.7rem 1.5rem;
 	margin: 10px;
+}
+
+.main-content {
+	display: grid;
+	grid-template: 3fr 2fr / 1fr auto;
+	background-color: rgba(241, 209, 229, 0.685);
+	padding: 10px 40px;
+}
+
+.main-content > div:first-of-type{
+	grid-row: 1 / -1;
+}
+
+.main-content h3 {
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(45ch, 60ch));
+	grid-auto-rows: 15rem;
+	gap: 10ch;
+}
+
+.card {
+	background-color: white;
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: inset 10px 0px rgb(200, 180, 5);
+}
+
+.card p {
+	font-size: 1rem;
+	font-weight: 600;
+	color: gray;
+}
+
+.trending,
+.announcements {
+	display: grid;
+	background-color: white;
+	border-radius: 20px;
+	padding: 15px;
+}
+
+.trending > div {
+	display: grid;
+	grid-template: 1fr 1fr / auto 1fr;
+	row-gap: 0.2rem;
+	column-gap: 1.5rem;
+}
+
+.trending img {
+	grid-row: 1 / -1;
+	height: 3rem;
+	align-self: center;
+}
+
+.trending p{
+	padding: 0.2rem;
+	margin: 0;
+	font-size: 1rem;
 }
