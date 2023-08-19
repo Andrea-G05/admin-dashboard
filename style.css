@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
 	font-family: Roboto, 'Times New Roman', Times, serif;
 }
 
 .container {
 	display: grid;
-	grid-template: 12rem 1fr /15rem 1fr;
+	grid-template: 12rem 1fr /18rem 1fr;
 	height: 100vh;
 }
 
@@ -14,15 +16,12 @@ body{
 	display: grid;
 	grid-auto-rows: min-content;
 	gap: 10rem;
-	background-color: aqua;
-}
-
-.sidebar .logo{
-	font-size: 2rem;
+	padding: 20px;
 }
 
 .sidebar ul {
-	font-size: 1.5rem;
+	list-style: none;
+	padding-left: 1.5rem;
 }
 
 header{
@@ -42,6 +41,12 @@ header > div {
 	margin: 10px 30px;
 }
 
+.search-bar input {
+	border-radius: 0.8rem;
+	height: 2rem;
+	padding: 0 0.5rem;
+}
+
 .personal-info{
 	display: grid;
 	grid-template: 1fr 1fr / auto 1fr;
@@ -57,7 +62,7 @@ header > div {
 .personal-info p {
 	margin: 0;
 	padding: 0;
-	font-weight: bolder;
+	font-weight: 1000;
 }
 
 .greeting{
@@ -66,7 +71,7 @@ header > div {
 }
 
 .username{
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	align-self: self-start;
 }
 
@@ -75,7 +80,6 @@ img {
 }
 
 .user-info button{
-	font-size: 1.5rem;
 	border-radius: 30px;
 	padding: 0.7rem 1.5rem;
 	margin: 10px;
@@ -84,7 +88,6 @@ img {
 .main-content {
 	display: grid;
 	grid-template: 3fr 2fr / 1fr auto;
-	background-color: rgba(241, 209, 229, 0.685);
 	padding: 10px 40px;
 }
 
@@ -142,4 +145,41 @@ img {
 	padding: 0.2rem;
 	margin: 0;
 	font-size: 1rem;
+}
+
+
+/* theme */
+
+body {
+	--main-color: #164e63;
+	--secondary-color: #fed7aa;
+	--text-color: white;
+}
+
+.user-info button,
+.sidebar {
+	background-color: var(--main-color);
+	color: var(--text-color);
+	font-weight: 800;
+}
+
+.sidebar{
+	font-size: 2rem;
+}
+
+.sidebar .logo{
+	font-size: 3rem;
+}
+
+header {
+	box-shadow: 0px 0px 10px gray;
+	z-index: 1;
+}
+
+.user-info button {
+	font-size: 1.5rem;
+}
+
+.main-content{
+	background-color: var(--secondary-color);
 }
